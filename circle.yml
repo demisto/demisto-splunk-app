@@ -1,4 +1,4 @@
-dependencies:
+test:
 
   override:
     - ./build-demisto-app.sh
