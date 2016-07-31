@@ -204,7 +204,7 @@ func getXSRFToken(resp *http.Response) string {
 func getClient() *http.Client {
 
 	tr := &http.Transport{
-		TLSClientConfig: &tls.Config{InsecureSkipVerify: true}, // TODO add insecure to settings
+		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
 
 	return &http.Client{Transport: tr}
