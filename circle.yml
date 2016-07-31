@@ -1,0 +1,5 @@
+dependencies:
+
+  override:
+    - ./build-demisto-app.sh
+    - ls
