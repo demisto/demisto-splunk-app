@@ -1,0 +1,84 @@
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label" for="demisto_base_url">URL</label>
+
+        <div class="controls">
+            <input type="text" name="action.demisto.param.base_url" id="demisto_base_url" placeholder="e.g. https://127.0.0.1:8443" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_username">Username</label>
+
+        <div class="controls">
+            <input type="text" name="action.demisto.param.username" id="demisto_username" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_password">Password</label>
+
+        <div class="controls">
+            <input type="password" name="action.demisto.param.password" id="demisto_password" />
+        </div>
+    </div>
+
+    <br/>
+    <h5>Incident Settings</h5>
+    <br/>
+
+    <div class="control-group">
+        <label class="control-label" for="demisto_incident_name">Name</label>
+
+        <div class="controls">
+            <input type="text" name="action.demisto.param.name" id="demisto_incident_name" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_incident_occured">Occured Time (epoch)</label>
+
+        <div class="controls">
+            <input type="text" name="action.demisto.param.occured" id="demisto_incident_occured" value="$trigger_time$" />
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_incident_labels">Labels</label>
+
+        <div class="controls">
+            <input type="text" name="action.demisto.param.labels" id="demisto_incident_labels" placeholder="e.g. IP:1.1.1.1,User:john" />
+            <span class="help-block">Comma-separated 'key:value' pairs</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <div class="controls">
+            <label class="checkbox" for="demisto_incident_investigate">
+                <input type="checkbox" name="action.demisto.param.investigate" id="demisto_incident_investigate" value="0"/>
+                Create investigation
+            </label>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_incident_severity">Severity</label>
+
+        <div class="controls">
+            <select id="demisto_incident_severity" name="action.demisto.param.severity">
+                <option value="Unknown">Unknown</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+                <option value="Critical">Critical</option>
+            </select>
+            <span class="help-block">Choose the severity of incidents for this alert</span>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label" for="demisto_incident_details">Details</label>
+
+        <div class="controls">
+            <textarea name="action.demisto.param.details" rows="10" id="demisto_incident_details" />
+            <span class="help-block">
+                Include tokens to insert text based on search results.
+                <a href="{{SPLUNKWEB_URL_PREFIX}}/help?location=learnmore.alert.action.tokens" target="_blank"
+                   title="Splunk help">Learn More <i class="icon-external"></i></a>
+            </span>
+        </div>
+    </div>
+</form>
