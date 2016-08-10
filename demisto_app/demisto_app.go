@@ -113,7 +113,7 @@ func createAndSendIncident(settings map[string]string) error {
 	incident["owner"] = ""
 	incident["evidence"] = []string{}
 	incident["version"] = 0
-	incident["type"] = ""
+	incident["type"] = settings["type"]
 	incident["id"] = ""
 	incident["insights"] = 0
 	incident["severity"] = severity

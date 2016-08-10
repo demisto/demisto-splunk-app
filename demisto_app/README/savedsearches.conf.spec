@@ -10,7 +10,7 @@ param.type = <string>
 * Configure value for the incident type.
 
 param.occured = <string>
-* Configure value for the incident type.
+* Configure value for the incident occured time.
 
 param.labels = <string>
 * Configure labels for the incident.
