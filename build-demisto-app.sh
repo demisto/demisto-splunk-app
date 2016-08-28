@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-VERSION="1.0.1"
+VERSION="1.0.2"
 SPLFILE="demisto_app_$VERSION.spl"
 
 cd demisto_app
