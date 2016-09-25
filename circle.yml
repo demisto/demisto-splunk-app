@@ -3,4 +3,4 @@ test:
   override:
     - ./build-demisto-app.sh
     - ls
-    - cp demisto_app_1.0.2.spl $CIRCLE_ARTIFACTS
+    - cp demisto_app_1.0.3.spl $CIRCLE_ARTIFACTS
