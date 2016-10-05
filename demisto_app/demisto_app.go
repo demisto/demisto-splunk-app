@@ -165,7 +165,7 @@ func createClientAndLogin(baseURL, credentials string) (*http.Client, string, er
 	if err != nil {
 		return nil, "", err
 	}
-	if loginResult != http.StatusOK {
+	if loginResult != http.StatusOK && loginResult != http.StatusCreated {
 		return nil, "", fmt.Errorf("ERROR Bad login response: %d", loginResult)
 	}
 	return client, xsrfToken, nil
