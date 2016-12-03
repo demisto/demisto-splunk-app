@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-VERSION="1.0.4"
-SPLFILE="demisto_app_$VERSION.spl"
+VERSION="1.0.5"
+SPLFILE="SA-DemistoAlertApp_$VERSION.spl"
 
-cd demisto_app
+cd SA-DemistoAlertApp
 echo "[-] Building..."
 go build
 if [ $? -ne '0' ];then
@@ -43,7 +43,7 @@ echo "[+] Done"
 
 cd ..
 echo "[-] Creating splunk app package..."
-tar -zcvf demisto_app.tar.gz --exclude='*.go' demisto_app/
+tar -zcvf demisto_app.tar.gz --exclude='*.go' SA-DemistoAlertApp/
 if [ $? -ne '0' ];then
 	echo "[x] Build failed!"
 	exit 2
