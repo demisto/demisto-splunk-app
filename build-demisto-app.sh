@@ -10,7 +10,7 @@ if [ $? -ne '0' ];then
 	echo "[x] Build failed!"
 	exit 1
 fi
-rm -f ./demisto_app
+rm -f ./SA-DemistoAlertApp
 
 # Build darwin
 echo "[-] Building darwin 32 bit"
