@@ -1,0 +1,4 @@
+# Make all of the objects in an app globally accessible to all apps
+
+[]
+export = system
